@@ -1,0 +1,31 @@
+{
+  "name": "filpkart-back-end",
+  "version": "1.0.0",
+  "description": "This is backend of ecommerce filpkart clone project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.server.js",
+    "start-dev": "nodemon ./src/index.server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "merm",
+    "project",
+    "backend",
+    "api",
+    "api"
+  ],
+  "author": "Shahadat Hossain",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "mongodb": "^4.8.0",
+    "mongoose": "^6.4.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
