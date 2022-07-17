@@ -7,7 +7,8 @@ const mongoose = require("mongoose");
 env.config();
 
 //routes
-const userRoutes = require("./routes/user");
+const authRoutes = require("./routes/auth");
+const adminRoutes = require("./routes/admin/auth");
 
 // mongodb+srv://admin:<password>@cluster0.yam67.mongodb.net/?retryWrites=true&w=majority
 // serverApi: ServerApiVersion.v1,
@@ -23,7 +24,8 @@ mongoose
     console.log("database connected");
   });
 app.use(bodyParser());
-app.use("/api", userRoutes);
+app.use("/api", authRoutes);
+app.use("/api", adminRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
