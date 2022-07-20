@@ -1,17 +1,16 @@
 {
-  "name": "filpkart-back-end",
+  "name": "mern-back-end",
   "version": "1.0.0",
-  "description": "This is backend of ecommerce filpkart clone project",
+  "description": "THis is a backend of ecommerce flipkart clone project",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/index.server.js"
   },
   "keywords": [
     "ecommerce",
-    "merm",
+    "mern",
     "project",
     "backend",
-    "api",
     "api"
   ],
   "author": "Shahadat Hossain",
@@ -25,9 +24,6 @@
     "express-validator": "^6.14.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.8.0",
-    "mongoose": "^6.4.4"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
+    "mongoose": "^6.4.5"
   }
 }
