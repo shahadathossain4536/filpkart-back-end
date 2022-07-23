@@ -1,15 +1,16 @@
 const express = require("express");
 const cors = require("cors");
-const bodyParser = require("body-parser");
+
 const mongoose = require("mongoose");
 const app = express();
-app.use(bodyParser());
+app.use(express.json());
 app.use(cors());
 require("dotenv").config();
 
 //routers
 const authRoutes = require("./routes/auth");
 const adminRoutes = require("./routes/admin/auth");
+const categoryRoutes = require("./routes/category");
 
 // mongodb+srv://admin:<password>@cluster0.yam67.mongodb.net/?retryWrites=true&w=majority
 
@@ -27,6 +28,7 @@ mongoose
 
 app.use("/api", authRoutes);
 app.use("/api", adminRoutes);
+app.use("/api", categoryRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running ${process.env.PORT}`);
