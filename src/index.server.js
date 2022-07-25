@@ -6,6 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 require("dotenv").config();
+const path = require("path");
 
 //routers
 const authRoutes = require("./routes/auth");
@@ -27,7 +28,7 @@ mongoose
   .then(() => {
     console.log("Database connected");
   });
-
+app.use("/public", express.static(path.join(__dirname, "uploads")));
 app.use("/api", authRoutes);
 app.use("/api", adminRoutes);
 app.use("/api", categoryRoutes);

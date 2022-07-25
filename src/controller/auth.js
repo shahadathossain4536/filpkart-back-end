@@ -40,7 +40,7 @@ exports.signin = (req, res) => {
           { _id: user._id, role: user.role },
           process.env.JWT_SECRET,
           {
-            expiresIn: "1h",
+            expiresIn: "6h",
           }
         );
         const { _id, firstName, lastName, email, role, fullName } = user;
