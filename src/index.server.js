@@ -15,6 +15,7 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const cartRoutes = require("./routes/cart");
 const initialDataRoutes = require("./routes/admin/initialData");
+const pageRoutes = require("./routes/admin/page");
 
 // mongodb+srv://admin:<password>@cluster0.yam67.mongodb.net/?retryWrites=true&w=majority
 
@@ -37,6 +38,7 @@ app.use("/api", productRoutes);
 app.use("/api", productRoutes);
 app.use("/api", cartRoutes);
 app.use("/api", initialDataRoutes);
+app.use("/api", pageRoutes);
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running ${process.env.PORT}`);
